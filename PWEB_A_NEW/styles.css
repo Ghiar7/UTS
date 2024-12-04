@@ -1,0 +1,408 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section {
+    margin-top: 60px;
+}
+
+#home {
+    background: #000000;
+    background-image: url('images/background.jpg');
+    background-size: cover; /* Agar gambar memenuhi seluruh area */
+    background-position: center; 
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content .highlight {
+    color: #f39c12;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+#about {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+}
+
+.profile-img {
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.about-text {
+    text-align: left;
+}
+
+
+.skills-list {
+    display: inline-block;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.skills-list li {
+    list-style: none;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#contact {
+    background-color: #fff;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+
+/* Header and Navigation */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Hero Section */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
+
+/* About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+/* Project Section */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 90%;
+    }
+
+    .project-item img {
+        width: 80%;
+    }
+}
+
+/* Skills Section */
+@media (max-width: 768px) {
+    .skills-list li {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Contact Form */
+@media (max-width: 768px) {
+    #contact form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Contact Form */
+@media (max-width: 768px) {
+    #contact-info {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 14px;
+    }
+}
+
+header {
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #444;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hide-navbar {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+
+/* Contact Information Section */
+#contact-info {
+    background-color: #f7f7f7;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+}
+
+.social-list li {
+    margin: 10px 0;
+}
+
+.social-list li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.social-list li a:hover {
+    color: #0077b5; /* Warna hover untuk ikon */
+}
+
+.social-list li a i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    /* Styling for screens smaller than 600px */
+    #contact-info h2 {
+        font-size: 24px;
+    }
+
+    #contact-info p {
+        font-size: 16px;
+    }
+
+    .social-list li a {
+        font-size: 16px;
+    }
+
+    .social-list li a i {
+        font-size: 18px;
+    }
+}
+
+
+
+/* Achievement Section */
+#achievements {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#achievements h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.achievement-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    text-align: left;
+}
+
+.achievement-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-item i {
+    font-size: 40px;
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.achievement-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.achievement-item p {
+    font-size: 16px;
+    color: #666;
+}
